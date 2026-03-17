@@ -46,7 +46,6 @@ The script will:
 - Extract tables from the PDF
 - Search for the entered string in the transaction descriptions
 - Calculate and display the total amounts sent and received for matching transactions
-- If the search string contains "MD SALEEM", it will also display additional financial calculations
 
 ## Dependencies
 

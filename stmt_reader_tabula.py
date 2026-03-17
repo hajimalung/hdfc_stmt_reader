@@ -12,8 +12,6 @@ dfs = tabula.read_pdf(hdfc_statement, pages='all', multiple_tables=True)
 count = 0  # Add counter
 totalSentTo = 0
 totalReceivedFrom = 0
-bikeCost = 165000
-plotWithdrawl = 1900000
 print(f"Total dataframes extracted: {len(dfs)}")  # Debug print to check number of dataframes
 for dfIndex, df in enumerate(dfs):  # Print only the first table for demonstration
     for index, row in df.iterrows():
@@ -29,8 +27,3 @@ for dfIndex, df in enumerate(dfs):  # Print only the first table for demonstrati
 print(f"Total matches found: {count}")  # Display count
 print(f"Total amount sent: {totalSentTo}")  # Display total amount
 print(f" - Total amount received: {totalReceivedFrom}")  # Display total amount
-if "MD SALEEM" in user_input:
-    print(f" - Total plot withdrawal: {plotWithdrawl}")  # Display total plot withdrawal
-    print(f" - Total bike cost: {bikeCost}")  # Display total bike cost
-    print(f"final effective amount sent till 2020 JAN : {totalSentTo - totalReceivedFrom - plotWithdrawl}")  # Display final effective amount
-

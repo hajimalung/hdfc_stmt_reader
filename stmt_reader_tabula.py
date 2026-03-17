@@ -2,12 +2,14 @@ import tabula
 import pandas as pd
 
 hdfc_statement = input("Enter a hdfc statement file name (only .pdf): ")
+if not hdfc_statement:
+    hdfc_statement = "orig_stmt.pdf"
 user_input = input("Enter a string: ")
-print(f"searching for '{user_input}' in the statement...")  # Debug print to check user input
+print(f"searching for '{user_input}' in the statement({hdfc_statement})...")  # Debug print to check user input
 
 dfs = tabula.read_pdf(hdfc_statement, pages='all', multiple_tables=True)
 
-count = 1  # Add counter
+count = 0  # Add counter
 totalSentTo = 0
 totalReceivedFrom = 0
 bikeCost = 165000
